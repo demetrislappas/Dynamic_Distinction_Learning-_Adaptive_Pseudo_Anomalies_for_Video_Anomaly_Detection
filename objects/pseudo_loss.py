@@ -56,7 +56,7 @@ class PseudoAnomalyCreator(nn.Module):
         super().__init__()
         self.sigmoid = nn.Sigmoid()
         # Initialize the anomaly weight parameter
-        self.anomaly_weight = nn.Parameter(5 * torch.zeros(1))
+        self.anomaly_weight = nn.Parameter(torch.zeros(1))
 
     def forward(self, x, mask):
         # Calculate the anomaly weight using a sigmoid function
